@@ -30,7 +30,7 @@ class InvoicesTest extends TestCase
     public function customer_can_see_a_form_for_creating_new_invoice()
     {
         $this->withoutExceptionHandling();
-        //        $user = factory(User::class, 1)->create();
+//        $user = factory(User::class, 1)->create();
         $user = User::factory()->create();
         $this->actingAs($user)->get('invoices/new')
             ->assertStatus(200)
