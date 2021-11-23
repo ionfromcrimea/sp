@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>Создание инвоиса</title>
+    <title>Создание пэймента</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 {{--    <link href="css337/bootstrap.min.css" rel="stylesheet">--}}
@@ -11,7 +11,7 @@
 
 <body>
 <div class="container-fluid">
-    <h1>Create new Invoice</h1>
+    <h1>Create new Payment</h1>
 </div>
 </body>
 </html>

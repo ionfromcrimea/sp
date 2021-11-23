@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\InvoicesController;
+use App\Http\Controllers\PaymentsController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,7 +20,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/invoices/new', [InvoicesController::class, 'create'])->name('invoices.create')->middleware('auth');
+Route::get('/payments/new', [PaymentsController::class, 'create'])->name('payments.create')->middleware('auth');
+Route::post('/payments', [PaymentsController::class, 'store'])->name('payments')->middleware('auth');
 Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
 
 Auth::routes();
